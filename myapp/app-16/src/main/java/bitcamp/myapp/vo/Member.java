@@ -16,9 +16,7 @@ public class Member {
   private String name;
   private String email;
   private String password;
-  private String birth;
   private String banknum;
-  private String phnum;
 
   // 생성자는 인스턴스를 생성한 후 필드를 초기화시키는 일을 한다.
   // 인스턴스를 사용할 때 문제가 없도록 유효한 값으로 초기화시킨다.
@@ -55,25 +53,12 @@ public class Member {
   public void setPassword(String password) {
     this.password = password;
   }
- 
-  public String getBirth() {
-    return birth;
-  }
-  public void setBirth(String birth) {
-    this.birth = birth;
-  }
 
   public String getBanknum() {
     return banknum;
   }
-  public void setName(String banknum) {
+  public void setBanknum(String banknum) {
     this.banknum = banknum;
   }
 
-  public String getPhnum() {
-    return birth;
-  }
-  public void setPhnum(String phnum) {
-    this.phnum = phnum;
-  }
 }
