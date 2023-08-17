@@ -1,12 +1,12 @@
 package bitcamp.myapp.handler;
 
 import bitcamp.myapp.vo.Board;
-import bitcamp.util.ArrayList;
+import bitcamp.util.LinkedList;
 import bitcamp.util.Prompt;
 
 public class BoardHandler implements Handler {
 
-  private ArrayList list = new ArrayList();
+  private LinkedList list = new LinkedList();
   private Prompt prompt;
   private String title;
 
@@ -64,7 +64,7 @@ public class BoardHandler implements Handler {
     System.out.println("번호, 내역, 사용은행, 조회수, 날짜");
     System.out.println("---------------------------------------");
 
-    Object[] arr = this.list.list();
+    Object[] arr = this.list.getList();
     for (Object obj : arr) {
       Board board = (Board) obj;
 
@@ -76,7 +76,7 @@ public class BoardHandler implements Handler {
   private void viewBoard() {
     int boardNo = this.prompt.inputInt("번호? ");
 
-    Board board = (Board) this.list.get(new Board(boardNo));
+    Board board = (Board) this.list.retrieve(new Board(boardNo));
     if (board == null) {
       System.out.println("해당 번호의 내역이 없습니다!");
       return;
@@ -94,7 +94,7 @@ public class BoardHandler implements Handler {
   private void updateBoard() {
     int boardNo = this.prompt.inputInt("번호? ");
 
-    Board board = (Board) this.list.get(new Board(boardNo));
+    Board board = (Board) this.list.retrieve(new Board(boardNo));
     if (board == null) {
       System.out.println("해당 번호의 내역이 없습니다!");
       return;
@@ -111,7 +111,7 @@ public class BoardHandler implements Handler {
 
 
   private void deleteBoard() {
-    if (!this.list.delete(new Board(this.prompt.inputInt("번호? ")))) {
+    if (!this.list.remove(new Board(this.prompt.inputInt("번호? ")))) {
       System.out.println("해당 번호의 게시글이 없습니다!");
     }
   }
