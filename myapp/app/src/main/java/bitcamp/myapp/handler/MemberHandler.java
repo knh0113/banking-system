@@ -59,10 +59,9 @@ public class MemberHandler {
 
     Member m = new Member();
     m.setName(this.prompt.inputString("은행이름? "));
-    m.setPhnum(this.prompt.inputString("계좌번호? "));
+    m.setBanknum(this.prompt.inputString("계좌번호? "));
     m.setEmail(this.prompt.inputString("이메일? "));
     m.setPassword(this.prompt.inputString("암호? "));
-    m.setGender(inputGender((char)0));
 
     this.members[this.length++] = m;
   }
@@ -74,8 +73,7 @@ public class MemberHandler {
 
     for (int i = 0; i < this.length; i++) {
       Member m = this.members[i];
-      System.out.printf("%d, %s, %s\n",
-          m.getNo(), m.getName(), m.getBanknum();
+      System.out.printf("%d, %s, %s\n", m.getNo(), m.getName(), m.getBanknum());
     }
   }
 
