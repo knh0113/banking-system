@@ -9,7 +9,6 @@ public class Board {
   private String content;
   private String writer;
   private String password;
-  private String banknum;
   private int viewCount;
   private long createdDate;
 
