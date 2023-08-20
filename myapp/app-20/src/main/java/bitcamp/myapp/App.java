@@ -9,7 +9,7 @@ public class App {
   public static void main(String[] args) {
     Prompt prompt = new Prompt();
 
-    Handler memberHandler = new MemberHandler(prompt, "회원");
+    Handler memberHandler = new MemberHandler(prompt, "은행");
     Handler boardHandler = new BoardHandler(prompt, "입금 내역");
     Handler boardHandler2 = new BoardHandler(prompt, "출금 내역");
 

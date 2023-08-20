@@ -1,12 +1,11 @@
 package bitcamp.myapp.handler;
 
 import bitcamp.myapp.vo.Member;
-import bitcamp.util.LinkedList;
 import bitcamp.util.Prompt;
 
 public class MemberHandler implements Handler {
 
-  private LinkedList list = new LinkedList();
+  private List list;
   private Prompt prompt;
   private String title;
 

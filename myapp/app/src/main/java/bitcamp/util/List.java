@@ -9,6 +9,7 @@ public interface List {
 
   Object remove(int index);
 
-  boolean remoce(Object value);
+  boolean remove(Object value);
 
+  int size();
 }
